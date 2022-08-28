@@ -30,6 +30,35 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+    overflow-y: overlay;
+}
+
+//Scrollbar CSS
+html {
+    *::-webkit-scrollbar {
+        border-radius: 0;
+        width: 8px;
+    }
+    *::-webkit-scrollbar {
+        border-radius: 0;
+        width: 8px;
+    }
+    *::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    *::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    *::-webkit-scrollbar-track {
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    *::-webkit-scrollbar-track {
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
 button,
