@@ -13,6 +13,8 @@ import {
     faSignOut,
     faPlus,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 
 import Button from '~/Components/Button';
 import images from '~/asset/images';
@@ -94,7 +96,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
                 <Search />
 
@@ -102,6 +106,7 @@ function Header() {
                     <Button outline leftIcon={<FontAwesomeIcon icon={faPlus} />} text>
                         Upload
                     </Button>
+
                     {currentUser ? (
                         <>
                             <Tippy delay={[0, 50]} content="Messages" placement="bottom">
